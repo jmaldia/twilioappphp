@@ -52,6 +52,11 @@
         background: #2ecc71;
         width: 100%;
     }
+    @media screen and (max-width: 480px) {
+        .form_box_wrapper {
+            max-width: 200px!important;
+        }
+    }
 </style>
 </head>
   
