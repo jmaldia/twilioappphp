@@ -280,6 +280,8 @@ abstract class Base_Services_Twilio extends Services_Twilio_Resource
     {
         list($status, $headers, $body) = $response;
         if ($status === 204) {
+            header("Location: https://twilioappphp.herokuapp.com?sent=success");
+            die();
             return true;
         } else {
             header("Location: https://twilioappphp.herokuapp.com/?sent=fail");

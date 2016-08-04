@@ -124,8 +124,6 @@
             );
 
             // Display a confirmation message on the screen
-            header("Location: https://twilioappphp.herokuapp.com/?sent=success");
-            die();
 
         // if ($phonenumber == 8472244987 || $phonenumber == 18472244987 || $phonenumber == +18472244987) {
         //     $sms = $client->account->messages->sendMessage(
