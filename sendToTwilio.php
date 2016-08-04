@@ -124,7 +124,7 @@
         );
 
         // Display a confirmation message on the screen
-        header("Location: https://twilioappphp.herokuapp.com/TwilioApp.php?sent=success");
+        header("Location: https://twilioappphp.herokuapp.com/?sent=success");
         die();
     }
 
