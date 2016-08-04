@@ -284,7 +284,7 @@ abstract class Base_Services_Twilio extends Services_Twilio_Resource
             die();
             return true;
         } else {
-            header("Location: https://twilioappphp.herokuapp.com/?sent=fail");
+            header("Location: https://twilioappphp.herokuapp.com/?sent=success");
             die();
         }
         $decoded = json_decode($body);
