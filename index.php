@@ -5,7 +5,10 @@
 <html>
 <head>
 <meta charset=utf-8>
-<title></title>
+<title>SMS by BoonSoh</title>
+<link rel="icon" 
+      type="image/ico" 
+      href="https://the-grid-user-content.s3-us-west-2.amazonaws.com/bc34d1d7-50e0-44e2-8137-06c8de6ca3ab.ico">
 <style type="text/css">
     body {
         margin: auto;
