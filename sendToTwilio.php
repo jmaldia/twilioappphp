@@ -21,7 +21,9 @@
 
     $contactname = $_GET["name"];//"Jon";
     $phonenumber = $_GET["phonenumber"]//847-224-4987;//
-    $textmessage = $_GET["message"]//"This is the message";// 
+    $message = $_GET["message"]//"This is the message";// 
+    
+    $textmessage = preg_replace("/[^0-9]/","",$message);
 
     // Step 3: instantiate a new Twilio Rest Client
     $http = new Services_Twilio_TinyHttp(
