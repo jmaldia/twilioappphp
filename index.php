@@ -82,7 +82,7 @@
             if ($success == "success") {
                 echo '<div class="message"><p>Thanks for your message!</p></div>';
             } else {
-                echo '<div class="message"><p>' . $error . '<br />Please text your number to +18472244987 to get your number verified.</p></div>';
+                echo '<div class="message"><p>' . $error . '<br /><br />You can also text your number to +18472244987 to get your number verified.<br />Please send us the code when you get it.</p></div>';
             }
         }
         
