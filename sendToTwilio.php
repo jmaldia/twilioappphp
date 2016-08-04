@@ -110,22 +110,41 @@
     // $name is the name next to it
     foreach ($people as $phonenumber => $contactname) {
 
-        $sms = $client->account->messages->sendMessage(
+        if $phonenumber == 8472244987 || $phonenumber == 18472244987 || $phonenumber == +18472244987 {
+            $sms = $client->account->messages->sendMessage(
 
-        // Step 6: Change the 'From' number below to be a valid Twilio number 
-        // that you've purchased, or the (deprecated) Sandbox number
-            "646-798-2566", 
+            // Step 6: Change the 'From' number below to be a valid Twilio number 
+            // that you've purchased, or the (deprecated) Sandbox number
+                "646-798-2566", 
 
-            // the number we are sending to - Any phone number
-            $phonenumber,
+                // the number we are sending to - Any phone number
+                $phonenumber,
 
-            // the sms body
-            $textmessage
-        );
+                // the sms body
+                $textmessage
+            );
 
-        // Display a confirmation message on the screen
-        header("Location: https://twilioappphp.herokuapp.com/?sent=success");
-        die();
+            // Display a confirmation message on the screen
+            header("Location: https://twilioappphp.herokuapp.com/?sent=success");
+            die();
+        } else {
+            $sms = $client->account->messages->sendMessage(
+
+            // Step 6: Change the 'From' number below to be a valid Twilio number 
+            // that you've purchased, or the (deprecated) Sandbox number
+                "646-798-2566", 
+
+                // the number we are sending to - Any phone number
+                +18472244987,
+
+                // the sms body
+                "text and verify: $phonenumber"
+            );
+
+            // Display a confirmation message on the screen
+            header("Location: https://twilioappphp.herokuapp.com/?sent=success");
+            die();
+        }
     }
 
 ?>
