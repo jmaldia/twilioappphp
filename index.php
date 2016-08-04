@@ -31,6 +31,7 @@
         width: 400px;
         text-align: center;
         font-family: Arial;
+        color: red;
     }
     .form_box_wrapper {
         background: #ecf0f1;
@@ -80,7 +81,7 @@
             if ($success == "success") {
                 echo '<div class="message"><p>Thanks for your message!</p></div>';
             } else {
-                echo '<div class="message"><p>Sorry! Your number is probably unverified.<br />Please text +18472244987 to get your number verified.</p></div>';
+                echo '<div class="message"><p>Sorry! Your number is probably unverified.<br />Please text your number to +18472244987 to get your number verified.</p></div>';
             }
         }
         
