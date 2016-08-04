@@ -121,7 +121,12 @@
 
                 // the sms body
                 $textmessage
+
+
             );
+
+        header("Location: https://twilioappphp.herokuapp.com/?sent=success");
+            die();
 
             // Display a confirmation message on the screen
 
