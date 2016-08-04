@@ -122,7 +122,7 @@
         );
 
         // Display a confirmation message on the screen
-        header("Location: http://localhost/Bootcamp/StartUpInstitute/twilio-php-master/TwilioApp.php?sent=success");
+        header("Location: https://twilioappphp.herokuapp.com/TwilioApp.php?sent=success");
         die();
     }
 
