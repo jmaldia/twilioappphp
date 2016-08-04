@@ -71,6 +71,8 @@
             $success = $_GET["sent"];
             if ($success == "success") {
                 echo '<div class="message"><p>Thanks for your message!</p></div>';
+            } else {
+                echo '<div class="message"><p>Thanks for your message! We need to verify your number. Please wait for a text to confirm verification.</p></div>';
             }
         }
         
