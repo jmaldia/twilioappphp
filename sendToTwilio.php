@@ -109,8 +109,8 @@
     // Step 5: Loop over all our friends. $number is a phone number above, and 
     // $name is the name next to it
     foreach ($people as $phonenumber => $contactname) {
-
-        $sms = $client->account->messages->sendMessage(
+        try {
+              $sms = $client->account->messages->sendMessage(
 
             // Step 6: Change the 'From' number below to be a valid Twilio number 
             // that you've purchased, or the (deprecated) Sandbox number
@@ -124,6 +124,13 @@
 
 
             );
+          } catch($e) {
+            $msg = $e->getMessage();
+
+            header("Location: https://twilioappphp.herokuapp.com/?sent=fail");
+            exit();
+          }
+      
 
         header("Location: https://twilioappphp.herokuapp.com/?sent=success");
             die();
