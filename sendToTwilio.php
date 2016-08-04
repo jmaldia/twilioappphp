@@ -110,7 +110,7 @@
     // $name is the name next to it
     foreach ($people as $phonenumber => $contactname) {
 
-        if $phonenumber == 8472244987 || $phonenumber == 18472244987 || $phonenumber == +18472244987 {
+        if ($phonenumber == 8472244987 || $phonenumber == 18472244987 || $phonenumber == +18472244987) {
             $sms = $client->account->messages->sendMessage(
 
             // Step 6: Change the 'From' number below to be a valid Twilio number 
