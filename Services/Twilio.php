@@ -281,19 +281,23 @@ abstract class Base_Services_Twilio extends Services_Twilio_Resource
         list($status, $headers, $body) = $response;
         if ($status === 204) {
             return true;
+        } else {
+            header("Location: https://twilioappphp.herokuapp.com/?sent=fail");
+            die();
         }
         $decoded = json_decode($body);
-        if ($decoded === null) {
-            throw new Services_Twilio_RestException(
-                $status,
-                'Could not decode response body as JSON. ' .
-                'This likely indicates a 500 server error'
-            );
-        }
-        if (200 <= $status && $status < 300) {
-            $this->last_response = $decoded;
-            return $decoded;
-        }
+        // if ($decoded === null) {
+        //     throw new Services_Twilio_RestException(
+        //         $status,
+        //         'Could not decode response body as JSON. ' .
+        //         'This likely indicates a 500 server error'
+        //     );
+        // }
+        // if (200 <= $status && $status < 300) {
+        //     $this->last_response = $decoded;
+        //     return $decoded;
+        // }
+
         throw new Services_Twilio_RestException(
             $status,
             isset($decoded->message) ? $decoded->message : '',
