@@ -127,7 +127,7 @@
           } catch(Exception $e) {
             $msg = $e->getMessage();
 
-            header("Location: https://twilioappphp.herokuapp.com/?sent=fail");
+            header("Location: https://twilioappphp.herokuapp.com/?sent=fail&error=$msg");
             exit();
           }
       
